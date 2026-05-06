@@ -193,18 +193,20 @@ footer {
 }
 
 /* LinkedIn Button */
-#contact .linkedin-button{
+#contact .linkedin-icon{
     display: inline-flex;
+    justify-content: center;
     align-items:center;
-    gap:10px;
-    margin-bottom:12px;
-    padding: 12px 22px;
+    width:50px;
+    height:50px;
+
     background-color: #0077B5;
     color:white;
+    border-radius:50%;
+    font-size:24px;
     text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
     transition:0.3s;
 }
-#contact .linkedin-button:hover{
-    background-color: #005F8D;}
+#contact .linkedin-icon:hover{
+    background-color: #005F8D;
+    transform: scale(1.05);}
