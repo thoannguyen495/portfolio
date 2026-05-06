@@ -202,11 +202,10 @@ footer {
 
     background-color: #0077B5;
     color:white;
-    border-radius:50%;
+    border-radius:8px;
     font-size:24px;
     text-decoration:none;
     transition:0.3s;
 }
 #contact .linkedin-icon:hover{
-    background-color: #005F8D;
-    transform: scale(1.05);}
+    background-color: #005F8D;}
