@@ -211,3 +211,7 @@ footer {
 #contact .linkedin-icon:hover{
     background-color: #005F8D;
     transform:scale(1.08);}
+
+.dark-mode{
+    background color: #1E1E1E;
+    color: white;}
