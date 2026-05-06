@@ -193,9 +193,9 @@ footer {
 }
 
 /* LinkedIn Button */
-.linkedin-button{
+#contact .linkedin-button{
     display: inline-block;
-    margin-top:12px;
+    margin-bottom:12px;
     padding: 12px 22px;
     background color: #0077B5;
     color:white;
@@ -203,5 +203,5 @@ footer {
     border-radius:10px;
     font-weight:bold;
 }
-.linkedin-button:hover{
+#contact .linkedin-button:hover{
     background-color: #005F8D;}
