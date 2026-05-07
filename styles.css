@@ -212,19 +212,3 @@ footer {
     background-color: #005F8D;
     transform:scale(1.08);}
 
-.dark-mode{
-    background color: #1E1E1E;
-    color: white;}
-
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-body.dark-mode .hero {
-  background-color: #121212;
-  color: white;
-}
-body.dark-mode h1 {
-  color: white;
-}
