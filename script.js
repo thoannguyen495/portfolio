@@ -1,21 +1,19 @@
-const learnMoreButtons=document.querySelectorAll(".learn-more-btn");
+document.addEventListener("DOMContentLoaded",()=>{
+  const LearnMoreButtons=document.querySelectorAll(".learn-more-btn"); 
+  
+  learnMoreButtons.forEach((button)=>{
+    button.addEventListener("click",()=>{
 
-learnMoreButtons.forEach((button)=>{
-  button.addEventListener("click",()=>{
+      const extraInfo = button.nextElementSibling;
 
-    const extraInfo = button.nextElementSibling;
+      extraInfo.style.display =
+        extraInfo.style.display === "block" ? "none" : "block";
 
-    if (extraInfo.style.display=="block"){
-      extraInfo.style.display="none";
-      button.textContent="Learn More";
-    }
-
-    else {
-      extraInfo.style.display="block";
-      button.textContent="Show Less";
-    }
+      button.textContent =
+        extraInfo.style.display === "block" ? "Show Less" : "Learn More";
+    });
   });
-});
+
 
 const form=document.querySelector("form");
 
