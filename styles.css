@@ -239,3 +239,16 @@ footer {
 .extra-info li {
   margin-bottom: 8px;
 }
+
+.project-skills{
+    margin-top:15px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    padding-left:0;}
+.project-skills li{
+    list-style:none;
+    background-color:white;
+    padding: 8px 14px;
+    border-radius:20px;}
+
