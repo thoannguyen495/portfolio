@@ -15,7 +15,7 @@ body {
     color: #222;
 }
 
-/* Header and Navigation */
+/* Header and navigation */
 header {
     background-color: white;
     padding: 22px 8%;
@@ -56,7 +56,7 @@ nav a:hover {
     color: #5DADE2;
 }
 
-/* General Button */
+/* General button */
 button, .home-button {
     padding: 12px 22px;
     border: none;
@@ -79,7 +79,7 @@ section {
     padding: 70px 12%;
 }
 
-/* Home Section */
+/* Home section */
 #home {
     min-height: 75vh;
     display: flex;
@@ -137,7 +137,7 @@ h3 {
     border-radius: 20px;
 }
 
-/* Project Cards */
+/* Project cards */
 .project-card {
     background-color: #F5FBFF;
     padding: 28px;
@@ -192,7 +192,7 @@ footer {
     color: white;
 }
 
-/* LinkedIn Button */
+/* LinkedIn button */
 #contact .linkedin-icon{
     display: inline-flex;
     justify-content: center;
@@ -212,3 +212,9 @@ footer {
     background-color: #005F8D;
     transform:scale(1.08);}
 
+/* Image */
+.extra-info img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
