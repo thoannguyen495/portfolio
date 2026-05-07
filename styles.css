@@ -72,6 +72,10 @@ button, .home-button {
 button:hover, .home-button:hover {
     background-color: #5DADE2;
 }
+.learn-more-btn {
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
 
 /* Sections */
 section {
