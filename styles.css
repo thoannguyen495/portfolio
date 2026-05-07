@@ -226,11 +226,10 @@ footer {
 }
 
 .extra-info img {
-  width: 100%;
+  width: 30%;
   margin-top: 10px;
+  margin-right: 10px;
   border-radius: 10px;
 }
-
-#about p {
     margin-bottom: 18px;
 }
