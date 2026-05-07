@@ -17,11 +17,6 @@ learnMoreButtons.forEach((button)=>{
   });
 });
 
-const darkModeButton = document.getElementById("dark-mode-btn");
-
-darkModeButton.addEventListener("click",()=>{
-  document.body.classList.toggle("dark-mode");});
-
 const form=document.querySelector("form");
 
 form.addEventListener("submit", (event) =>
