@@ -230,3 +230,7 @@ footer {
   margin-top: 10px;
   border-radius: 10px;
 }
+
+#about p {
+    margin-bottom: 18px;
+}
