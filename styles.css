@@ -219,6 +219,8 @@ footer {
 
 .extra-info img {
   width: 30%;
+  height: 220px;
+  object-fit: cover;
   margin-top: 10px;
   margin-right: 10px;
   border-radius: 10px;
