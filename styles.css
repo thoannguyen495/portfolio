@@ -230,9 +230,10 @@ footer {
 }
 
 .extra-info ul {
-  list-style: none;
+  list-style-position: inside;
   padding-left: 0;
   margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .extra-info li {
