@@ -1,4 +1,4 @@
-const learnMoreButtons=document.querySelectorAll.(".learn-more-btn");
+const learnMoreButtons=document.querySelectorAll(".learn-more-btn");
 
 learnMoreButtons.forEach((button)=>{
   button.addEventListener("click",()=>{
@@ -28,9 +28,8 @@ form.addEventListener("submit", (event) =>
   {
     const name = document.querySelector('input[name="name"]').value;
     const email = document.querySelector('input[name="email"]').value;
-    const email = document.querySelector('textarea[name="message"]').value;
-
-    if (name===""||email===""|message===""){
+    const message = document.querySelector('textarea[name="message"]').value;
+    if (name===""||email===""||message===""){
       event.preventDefault();
       alert("Please fill in all fields.");}});
 
