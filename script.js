@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",()=>{
-  const LearnMoreButtons=document.querySelectorAll(".learn-more-btn"); 
+  const learnMoreButtons=document.querySelectorAll(".learn-more-btn"); 
   
   learnMoreButtons.forEach((button)=>{
     button.addEventListener("click",()=>{
