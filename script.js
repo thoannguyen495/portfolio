@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) =>
     const message = document.querySelector('textarea[name="message"]').value;
     if (name===""||email===""||message===""){
       event.preventDefault();
-      alert("Please fill in all fields.");}});
+      alert("Please fill in all fields.");}});});
 
 
       
