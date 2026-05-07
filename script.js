@@ -1,3 +1,4 @@
+/*Expandable project cards*/
 document.addEventListener("DOMContentLoaded",()=>{
   const learnMoreButtons=document.querySelectorAll(".learn-more-btn"); 
   
@@ -5,7 +6,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     button.addEventListener("click",()=>{
 
       const extraInfo = button.nextElementSibling;
-
+      
+      /*Show/hide project information */
       extraInfo.style.display =
         extraInfo.style.display === "block" ? "none" : "block";
 
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   });
 
-
+/*Contact form validation*/
 const form=document.querySelector("form");
 
 form.addEventListener("submit", (event) =>
