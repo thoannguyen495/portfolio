@@ -7,7 +7,7 @@ learnMoreButtons.forEach((button)=>{
 
     if (extraInfo.style.display=="block"){
       extraInfo.style.display="none";
-      button.textContent="LearnMore";
+      button.textContent="Learn More";
     }
 
     else {
