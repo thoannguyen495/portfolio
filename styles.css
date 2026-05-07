@@ -229,10 +229,12 @@ footer {
 #about p{margin-bottom: 18px;
 }
 
-.extra-info ul{
-    padding-left: 25px;
-    margin-top:10px;
-    margin-bottom:15px;}
-.extra-info li{
-    margin-bottom:8px;
+.extra-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.extra-info li {
+  margin-bottom: 8px;
 }
