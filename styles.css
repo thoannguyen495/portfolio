@@ -213,8 +213,12 @@ footer {
     transform:scale(1.08);}
 
 /* Image */
+.extra-info {
+  display: none;
+}
+
 .extra-info img {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
 }
