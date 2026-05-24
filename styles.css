@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── REVEAL (safe fallback) ── */
+/* â”€â”€ REVEAL (safe fallback) â”€â”€ */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -42,7 +42,7 @@ body {
   transform: none !important;
 }
 
-/* ── HEADER ── */
+/* â”€â”€ HEADER â”€â”€ */
 header {
   background: rgba(240,246,255,0.92);
   backdrop-filter: blur(18px);
@@ -93,7 +93,7 @@ nav a::after {
 nav a:hover { color: var(--accent); }
 nav a:hover::after { width: 100%; }
 
-/* ── HERO ── */
+/* â”€â”€ HERO â”€â”€ */
 #home {
   min-height: 92vh;
   display: grid;
@@ -231,7 +231,7 @@ nav a:hover::after { width: 100%; }
   to { opacity: 1; transform: none; }
 }
 
-/* ── SECTION WRAPPER ── */
+/* â”€â”€ SECTION WRAPPER â”€â”€ */
 .section-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -255,7 +255,7 @@ h2 {
 }
 h2 em { font-style: italic; color: var(--accent); }
 
-/* ── ABOUT ── */
+/* â”€â”€ ABOUT â”€â”€ */
 #about {
   background: var(--bg-white);
   border-top: 1px solid var(--border-gray);
@@ -291,7 +291,9 @@ h2 em { font-style: italic; color: var(--accent); }
   margin-bottom: 10px;
   margin-top: 24px;
 }
-.about-sidebar h3:first-child { margin-top: 0; }
+.about-sidebar {
+  margin-top: 52px;
+}
 .tag-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .tag-list li {
   padding: 5px 12px;
@@ -309,7 +311,7 @@ h2 em { font-style: italic; color: var(--accent); }
   color: var(--accent);
 }
 
-/* ── PROJECTS ── */
+/* â”€â”€ PROJECTS â”€â”€ */
 #projects { background: var(--bg); }
 .projects-grid { display: flex; flex-direction: column; gap: 20px; }
 .project-card {
@@ -448,7 +450,7 @@ h2 em { font-style: italic; color: var(--accent); }
   box-shadow: var(--shadow-md);
 }
 
-/* ── CONTACT ── */
+/* â”€â”€ CONTACT â”€â”€ */
 #contact {
   background: var(--bg-white);
   border-top: 1px solid var(--border-gray);
@@ -547,7 +549,7 @@ textarea { min-height: 130px; resize: vertical; }
   box-shadow: 0 6px 20px rgba(26,107,191,0.35);
 }
 
-/* ── FOOTER ── */
+/* â”€â”€ FOOTER â”€â”€ */
 footer {
   background: #0d1f35;
   color: rgba(255,255,255,0.4);
@@ -558,7 +560,7 @@ footer {
 }
 footer strong { color: rgba(255,255,255,0.75); }
 
-/* ── TOAST ── */
+/* â”€â”€ TOAST â”€â”€ */
 .toast {
   position: fixed;
   bottom: 32px; left: 50%;
@@ -575,7 +577,7 @@ footer strong { color: rgba(255,255,255,0.75); }
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* ── RESPONSIVE ── */
+/* â”€â”€ RESPONSIVE â”€â”€ */
 @media (max-width: 900px) {
   #home {
     grid-template-columns: 1fr;
