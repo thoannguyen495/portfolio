@@ -25,25 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach(el => el.classList.add("revealed"));
   }, 800);
 
-  /* Animated counters */
-  const statNumbers = document.querySelectorAll(".stat-number");
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.target);
-        let current = 0;
-        const increment = target / 60;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) { current = target; clearInterval(timer); }
-          el.textContent = Math.floor(current) + (el.dataset.suffix || "");
-        }, 20);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  statNumbers.forEach(el => counterObserver.observe(el));
 
   /* Learn More toggle */
   document.querySelectorAll(".learn-more-btn").forEach((button) => {
