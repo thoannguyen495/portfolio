@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,6 +20,7 @@ body {
 }
 
 /* Header and navigation bar */
+
 header {
     background-color: white;
     padding: 22px 8%;
@@ -61,7 +63,8 @@ nav a:hover {
 
 /* General button */
 
-button, .home-button {
+button,
+.home-button {
     padding: 12px 22px;
     border: none;
     background-color: #89CFF0;
@@ -72,22 +75,28 @@ button, .home-button {
     text-decoration: none;
     display: inline-block;
     width: fit-content;
+    transition: 0.3s;
 }
 
-button:hover, .home-button:hover {
+button:hover,
+.home-button:hover {
     background-color: #5DADE2;
+    transform: translateY(-2px);
 }
+
 .learn-more-btn {
     margin-top: 12px;
     margin-bottom: 15px;
 }
 
 /* Main sections */
+
 section {
     padding: 70px 12%;
 }
 
 /* Home section */
+
 #home {
     min-height: 75vh;
     display: flex;
@@ -111,7 +120,9 @@ section {
 
 /* About, Projects, Contact sections */
 
-#about, #projects, #contact {
+#about,
+#projects,
+#contact {
     background-color: white;
     margin: 35px auto;
     width: 85%;
@@ -132,6 +143,7 @@ h3 {
 }
 
 /* About section */
+
 #about ul {
     margin-top: 15px;
     display: flex;
@@ -147,21 +159,23 @@ h3 {
 }
 
 /* Project cards */
+
 .project-card {
     background-color: #F5FBFF;
     padding: 28px;
     margin: 22px 0;
     border-radius: 16px;
     border-left: 6px solid #89CFF0;
+    transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    transition: 0.3s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Contact form */
+
 form {
     display: flex;
     flex-direction: column;
@@ -170,7 +184,8 @@ form {
     margin-top: 20px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 12px;
     border: 1px solid #BBDDF2;
     border-radius: 8px;
@@ -181,11 +196,12 @@ textarea {
 }
 
 form input,
-form textarea{
-    width:100%;
+form textarea {
+    width: 100%;
 }
 
 /* Footer */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -194,62 +210,78 @@ footer {
 }
 
 /* LinkedIn button */
-#contact .linkedin-icon{
+
+#contact .linkedin-icon {
     display: inline-flex;
     justify-content: center;
-    align-items:center;
-    
-    width:55px;
-    height:55px;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
 
     background-color: #0077B5;
-    color:white;
-    border-radius:50%;
-    font-size:26px;
-    text-decoration:none;
-    transition:0.3s;
+    color: white;
+    border-radius: 50%;
+    font-size: 26px;
+    text-decoration: none;
+    transition: 0.3s;
 }
-#contact .linkedin-icon:hover{
-    background-color: #005F8D;
-    transform:scale(1.08);}
 
-/* Image */
+#contact .linkedin-icon:hover {
+    background-color: #005F8D;
+    transform: scale(1.08);
+}
+
+/* Expandable project info */
+
 .extra-info {
-  display: none;
-  margin-top: 15px;
-  padding: 15px;
-  background-color: #D6EEFF;
-  border-radius: 10px;
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #D6EEFF;
+    border-radius: 10px;
 }
 
 .extra-info.show {
-  display: block;
+    display: block;
 }
+
+/* Images */
 
 .extra-info img {
-  width: 30%;
-  height: 220px;
-  object-fit: cover;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 10px;
+    width: 30%;
+    height: 220px;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-#about p{margin-bottom: 18px;
+.extra-info img:hover {
+    transform: scale(1.03);
 }
+
+/* Paragraph spacing */
+
+#about p {
+    margin-bottom: 18px;
+}
+
+/* Lists inside expanded cards */
 
 .extra-info ul {
-  list-style-position: inside;
-  padding-left: 0;
-  margin-top: 10px;
-  margin-bottom: 15px;
+    list-style-position: inside;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .extra-info li {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
-/* Tools & skills tags*/
+/* Tools & skills tags */
 
 .tools-list {
     margin-top: 15px;
@@ -274,75 +306,12 @@ h4 {
     font-size: 18px;
 }
 
+/* Navbar scroll effect */
 
-.extra-info{
-  max-height:0;
-  overflow:hidden;
-  opacity:0;
-  transform:translateY(-10px);
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
 
-  transition:
-    max-height 0.5s ease,
-    opacity 0.5s ease,
-    transform 0.5s ease;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
 }
-
-.extra-info.show{
-  max-height:1200px;
-  opacity:1;
-  transform:translateY(0);
-  margin-top:15px;
-}
-
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-header.scrolled{
-  background:rgba(0,0,0,0.85);
-  backdrop-filter:blur(10px);
-
-  box-shadow:
-    0 5px 20px rgba(0,0,0,0.25);
-}
-
-
-.project-card{
-  opacity:0;
-  transform:translateY(40px);
-
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.project-card.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-
-
-.learn-more-btn,
-.home-button,
-button{
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.learn-more-btn:hover,
-.home-button:hover,
-button:hover{
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 10px 20px rgba(0,0,0,0.2);
-}
-
