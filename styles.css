@@ -31,7 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-/* â”€â”€ REVEAL (safe fallback) â”€â”€ */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -42,7 +41,6 @@ body {
   transform: none !important;
 }
 
-/* â”€â”€ HEADER â”€â”€ */
 header {
   background: rgba(240,246,255,0.92);
   backdrop-filter: blur(18px);
@@ -93,7 +91,6 @@ nav a::after {
 nav a:hover { color: var(--accent); }
 nav a:hover::after { width: 100%; }
 
-/* â”€â”€ HERO â”€â”€ */
 #home {
   min-height: 92vh;
   display: grid;
@@ -231,7 +228,6 @@ nav a:hover::after { width: 100%; }
   to { opacity: 1; transform: none; }
 }
 
-/* â”€â”€ SECTION WRAPPER â”€â”€ */
 .section-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -255,17 +251,12 @@ h2 {
 }
 h2 em { font-style: italic; color: var(--accent); }
 
-/* â”€â”€ ABOUT â”€â”€ */
 #about {
   background: var(--bg-white);
   border-top: 1px solid var(--border-gray);
   border-bottom: 1px solid var(--border-gray);
 }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 60px;
-  align-items: start;
+
 }
 .about-text p {
   font-size: 15.5px;
@@ -291,8 +282,30 @@ h2 em { font-style: italic; color: var(--accent); }
   margin-bottom: 10px;
   margin-top: 24px;
 }
-.about-sidebar {
-  margin-top: 52px;
+.about-text {
+  max-width: 760px;
+}
+
+.about-bottom {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .tag-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .tag-list li {
@@ -447,7 +460,6 @@ h2 em { font-style: italic; color: var(--accent); }
   box-shadow: var(--shadow-md);
 }
 
-/* â”€â”€ CONTACT â”€â”€ */
 #contact {
   background: var(--bg-white);
   border-top: 1px solid var(--border-gray);
@@ -546,7 +558,6 @@ textarea { min-height: 130px; resize: vertical; }
   box-shadow: 0 6px 20px rgba(26,107,191,0.35);
 }
 
-/* â”€â”€ FOOTER â”€â”€ */
 footer {
   background: #0d1f35;
   color: rgba(255,255,255,0.4);
@@ -557,7 +568,6 @@ footer {
 }
 footer strong { color: rgba(255,255,255,0.75); }
 
-/* â”€â”€ TOAST â”€â”€ */
 .toast {
   position: fixed;
   bottom: 32px; left: 50%;
@@ -574,7 +584,6 @@ footer strong { color: rgba(255,255,255,0.75); }
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
 @media (max-width: 900px) {
   #home {
     grid-template-columns: 1fr;
