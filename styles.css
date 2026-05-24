@@ -259,10 +259,10 @@ h2 em { font-style: italic; color: var(--accent); }
 
 }
 .about-text p {
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--ink-soft);
-  margin-bottom: 16px;
-  line-height: 1.85;
+  margin-bottom: 28px;
+  line-height: 1.9;
 }
 .about-text p:first-child::first-letter {
   font-family: 'Cormorant Garamond', serif;
