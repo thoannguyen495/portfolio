@@ -221,10 +221,10 @@ nav a:hover::after { width: 100%; }
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-muted);
+  color: var(--ink);
   margin-top: 4px;
 }
-.stat-accent { color: var(--accent); }
+.stat-accent { color: var(--ink); }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -408,7 +408,7 @@ h2 em { font-style: italic; color: var(--accent); }
   font-size: 20px;
   font-weight: 400;
   color: var(--ink);
-  margin: 24px 0 12px;
+  margin: 24px 0 8px;
 }
 .tools-list {
   list-style: none;
@@ -416,6 +416,7 @@ h2 em { font-style: italic; color: var(--accent); }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .tools-list li {
