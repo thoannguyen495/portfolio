@@ -1,160 +1,128 @@
-document.addEventListener("DOMContentLoaded", () => {
+<title> Thoan Nguyen Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<h3> Skills</h3>
+<ul>
+    <li>R, Python, Excel</li>
+    <li>Statistical Modeling</li>
+    <li>Data Visualization</li>
+    <li>Leadership</li>
+    <li>Communication</li>
+</ul>
+
+<h3> Interests </h3>
+<ul>
+    <li>Photography</li>
+    <li>Travelling</li>
+    <li>Running</li>
+    <li>Cooking</li>
+</ul>
+<h3>Insertact</h3>
+
+<p> An early-stage startup developing a contact lens insertion and removal device for specialized contact lens users</p>
 
+<button class="learn-more-btn">
+    Learn More
+</button>
 
-  const learnMoreButtons =
-    document.querySelectorAll(".learn-more-btn");
+<div class="extra-info">
 
-  learnMoreButtons.forEach((button) => {
+    <p>
+This project originated from the 2026 Winterim Competition at Lewis & Clark College, where I won first place and decided to move forward with the business.
+Currently, we are focusing on customer discovery and validation while continuing to develop our prototype.
+We will present at the final pitch day of InventOR on June 26th. Come cheer us on!
+You can get a free ticket
 
-    button.addEventListener("click", () => {
+here.
 
-      const extraInfo = button.nextElementSibling;
+Tools & Skills
 
-      /* Toggle animation class */
+Market Research
+Customer Discovery
+Product Development
+Leadership
 
-      extraInfo.classList.toggle("show");
 
-      /* Change button text */
 
-      button.textContent =
-        extraInfo.classList.contains("show")
-          ? "Show Less"
-          : "Learn More";
 
-    });
 
-  });
+</div> </div>
+<p> A mathematics research project on the Moran model </p>
 
-  const form = document.querySelector("form");
+<button class="learn-more-btn">
+    Learn More
+</button>
 
-  form.addEventListener("submit", (event) => {
+<div class="extra-info">
 
-    const name =
-      document.querySelector('input[name="name"]').value.trim();
+   <p>
+During the summer of 2025, I worked as a research assistant under Professor Yung-Pin Chen on a mathematics research project focused on the Moran model and stochastic systems.
+<li>Analyzed Markov chains and applied probability theory to study long-term behavior, fixation probabilities, and absorbing states in population-based models.</li>
 
-    const email =
-      document.querySelector('input[name="email"]').value.trim();
+<li>Presented research findings at a campus-wide lunch talk, communicating technical concepts and results to students and faculty across disciplines.</li>
+     <img src="images/IMG_0768.JPG" alt="Math Research">
+    <img src="images/IMG_8937.jpg" alt="Math Research">
+    <img src="images/IMG_8941.JPG" alt="Math Research">
+<div class="project-card">
+<p> A case competition hosted as part of the CAS Central Summer Program </p>
 
-    const message =
-      document.querySelector('textarea[name="message"]').value.trim();
+<button class="learn-more-btn">
+    Learn More
+</button>
 
-    if (
-      name === "" ||
-      email === "" ||
-      message === ""
-    ) {
+<div class="extra-info">
 
-      event.preventDefault();
+   <p>
+During the summer of 2025, I was accepted into the CAS Center Summer Program. Over the course of eight weeks, we worked on a case competition focused on homeowner insurance.
+I served as the team lead for a cohort of eight participants. We analyzed two years of insured property data across multiple perils and discount types, using Excel to identify
+risk patterns and develop recommendations. I also applied concepts from underwriting, pricing, and reserving that I learned throughout the program to the case competition.
 
-      alert("Please fill in all fields.");
+    <ul class="tools-list">
+        <li>Excel</li>
+        <li>Data Analysis</li>
+        <li>Data Visualization</li>
+        <li>Leadership</li> </ul>
+    <img src="images/IMG_9029.jpg" alt="Homeowner Case">
+    
+<div class="project-card">
+<p> A case competition hosted as part of the CAS Student Central Annual Meeting </p>
 
-      return;
+<button class="learn-more-btn">
+    Learn More
+</button>
 
-    }
+<div class="extra-info">
 
-    /* Simple email validation */
+   <p>
+       I led a team of four participants in this case competition. My teammates came from UT Austin, UT Dallas, and TCU. 
+       In the case study, we acted as a reinsurance company tasked with proposing a quota share treaty for a client insurance company focused on catastrophic risk.
+       Our goal was to provide recommendations to help manage underwriting volatility, maintain profitability, and preserve strong financial ratings. 
+       We primarily used Excel to analyze the company’s overall profile, business characteristics, and strategic goals. 
+       We also analyzed claims data related to catastrophic and non-catastrophic events to evaluate risk exposure and support our recommendations.</p>
 
-    const emailPattern =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     <h4 class="tools-title">Tools & Skills</h4>
 
-    if (!emailPattern.test(email)) {
+    <ul class="tools-list">
+        <li>Excel</li>
+        <li>Data Analysis</li>
+        <li>Data Visualization</li>
+        <li>Leadership</li> </ul>
+    
+    <img src="images/IMG_1034.JPG" alt="Reinsurance Case">
+    
 
-      event.preventDefault();
 
-      alert("Please enter a valid email address.");
+<form action="/submit-form" method ="POST">
+    <label>Name</label>
+    <input type="text" name ="name">
 
-      return;
+    <label>Email</label>
+    <input type="email" name= "email">
 
-    }
+    <label>Message</label>
+    <textarea name ="message"></textarea>
 
-    alert("Message sent successfully!");
+    <button type="submit">Send</button>
+</form>
 
-  });
-
-  window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if (window.scrollY > 50) {
-
-      header.classList.add("scrolled");
-
-    } else {
-
-      header.classList.remove("scrolled");
-
-    }
-
-  });
-
-  const cards =
-    document.querySelectorAll(".project-card");
-
-  const observer =
-    new IntersectionObserver((entries) => {
-
-      entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.classList.add("visible");
-
-        }
-
-      });
-
-    }, {
-      threshold: 0.2
-    });
-
-  cards.forEach((card) => {
-
-    observer.observe(card);
-
-  });
-
-
-  const navLinks =
-    document.querySelectorAll('nav a');
-
-  navLinks.forEach((link) => {
-
-    link.addEventListener("click", (event) => {
-
-      event.preventDefault();
-
-      const targetId =
-        link.getAttribute("href");
-
-      const targetSection =
-        document.querySelector(targetId);
-
-      targetSection.scrollIntoView({
-        behavior: "smooth"
-      });
-
-    });
-
-  });
-
-
-  const projectImages =
-    document.querySelectorAll(".project-card img");
-
-  projectImages.forEach((image) => {
-
-    image.addEventListener("mouseenter", () => {
-
-      image.style.transform = "scale(1.03)";
-
-    });
-
-    image.addEventListener("mouseleave", () => {
-
-      image.style.transform = "scale(1)";
-
-    });
-
-  });
-
-});
