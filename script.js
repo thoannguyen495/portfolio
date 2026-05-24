@@ -6,9 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
     header.classList.toggle("scrolled", window.scrollY > 30);
   });
 
-  /* Animated counter for stats */
+  /* Scroll reveal — with guaranteed fallback after 800ms */
+  const revealEls = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Fallback: reveal everything that is still hidden after 800ms
+  setTimeout(() => {
+    revealEls.forEach(el => el.classList.add("revealed"));
+  }, 800);
+
+  /* Animated counters */
   const statNumbers = document.querySelectorAll(".stat-number");
-  const observer = new IntersectionObserver((entries) => {
+  const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
@@ -20,28 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
           if (current >= target) { current = target; clearInterval(timer); }
           el.textContent = Math.floor(current) + (el.dataset.suffix || "");
         }, 20);
-        observer.unobserve(el);
+        counterObserver.unobserve(el);
       }
     });
   }, { threshold: 0.5 });
-  statNumbers.forEach(el => observer.observe(el));
-
-  /* Scroll reveal */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  statNumbers.forEach(el => counterObserver.observe(el));
 
   /* Learn More toggle */
-  const learnMoreButtons = document.querySelectorAll(".learn-more-btn");
-  learnMoreButtons.forEach((button) => {
+  document.querySelectorAll(".learn-more-btn").forEach((button) => {
     button.addEventListener("click", () => {
-      const extraInfo = button.nextElementSibling;
+      const extraInfo = button.closest(".project-header").nextElementSibling;
       const isOpen = extraInfo.classList.contains("open");
       extraInfo.classList.toggle("open", !isOpen);
       button.textContent = isOpen ? "Learn More" : "Show Less";
@@ -51,40 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Contact form validation */
   const form = document.querySelector("form");
-  form.addEventListener("submit", (event) => {
-    const name = document.querySelector('input[name="name"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const message = document.querySelector('textarea[name="message"]').value;
-    if (name === "" || email === "" || message === "") {
-      event.preventDefault();
-      showToast("Please fill in all fields.");
-    }
-  });
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      const name = form.querySelector('input[name="name"]').value.trim();
+      const email = form.querySelector('input[name="email"]').value.trim();
+      const message = form.querySelector('textarea[name="message"]').value.trim();
+      if (!name || !email || !message) {
+        event.preventDefault();
+        showToast("Please fill in all fields.");
+      }
+    });
+  }
 
-  /* Toast notification */
+  /* Toast */
   function showToast(msg) {
     const toast = document.createElement("div");
     toast.className = "toast";
     toast.textContent = msg;
     document.body.appendChild(toast);
     setTimeout(() => toast.classList.add("show"), 10);
-    setTimeout(() => { toast.classList.remove("show"); setTimeout(() => toast.remove(), 300); }, 3000);
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
   }
 
   /* Typing animation */
   const roles = ["Entrepreneur", "Lewis & Clark Scholar", "Student Leader", "Mathematician", "Problem Solver"];
   let roleIndex = 0, charIndex = 0, deleting = false;
   const typingEl = document.getElementById("typing-text");
-  function typeLoop() {
-    const current = roles[roleIndex];
-    if (!deleting) {
-      typingEl.textContent = current.slice(0, ++charIndex);
-      if (charIndex === current.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
-    } else {
-      typingEl.textContent = current.slice(0, --charIndex);
-      if (charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
+  if (typingEl) {
+    function typeLoop() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        typingEl.textContent = current.slice(0, ++charIndex);
+        if (charIndex === current.length) { deleting = true; setTimeout(typeLoop, 1800); return; }
+      } else {
+        typingEl.textContent = current.slice(0, --charIndex);
+        if (charIndex === 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
+      }
+      setTimeout(typeLoop, deleting ? 55 : 90);
     }
-    setTimeout(typeLoop, deleting ? 55 : 90);
+    typeLoop();
   }
-  if (typingEl) typeLoop();
 });
