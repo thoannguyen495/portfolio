@@ -1,128 +1,186 @@
-<title> Thoan Nguyen Portfolio</title>
-<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<h3> Skills</h3>
-<ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thoan Nguyen Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>Thoan Nguyen</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Thoan Nguyen</h2>
+  <p>Entrepreneur | Lewis & Clark Scholar | Student Leader</p>
+  <a href="#projects" class="home-button">View my projects</a>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+
+  <p>I am a rising senior at Lewis & Clark College, double majoring in Mathematics and Computer Science with a minor in Economics. I am currently founding a startup called Insertact, where we are developing a contact lens insertion and removal device.</p>
+
+  <p>I have a strong foundation in data analysis, probability, and financial modeling. I enjoy applying quantitative skills to tackle real-world challenges in insurance, finance, and risk management.</p>
+
+  <p>Beyond academics and startup, I actively contribute to the Lewis & Clark College community through leadership roles in student organizations and part-time campus positions.</p>
+
+  <p>Outside of work and study, I enjoy running, photography, vlogging, cooking, baking, and watching MasterChef, which keep me energized and creative.</p>
+
+  <h3>Skills</h3>
+  <ul>
     <li>R, Python, Excel</li>
     <li>Statistical Modeling</li>
     <li>Data Visualization</li>
     <li>Leadership</li>
     <li>Communication</li>
-</ul>
+  </ul>
 
-<h3> Interests </h3>
-<ul>
+  <h3>Interests</h3>
+  <ul>
     <li>Photography</li>
     <li>Travelling</li>
     <li>Running</li>
     <li>Cooking</li>
-</ul>
-<h3>Insertact</h3>
+  </ul>
+</section>
 
-<p> An early-stage startup developing a contact lens insertion and removal device for specialized contact lens users</p>
+<section id="projects">
+  <h2>Projects</h2>
 
-<button class="learn-more-btn">
-    Learn More
-</button>
+  <div class="project-card">
+    <h3>Insertact</h3>
+    <p>An early-stage startup developing a contact lens insertion and removal device for specialized contact lens users.</p>
 
-<div class="extra-info">
+    <button class="learn-more-btn">Learn More</button>
 
-    <p>
-This project originated from the 2026 Winterim Competition at Lewis & Clark College, where I won first place and decided to move forward with the business.
-Currently, we are focusing on customer discovery and validation while continuing to develop our prototype.
-We will present at the final pitch day of InventOR on June 26th. Come cheer us on!
-You can get a free ticket
+    <div class="extra-info">
+      <p>This project originated from the 2026 Winterim Competition at Lewis & Clark College, where I won first place and decided to move forward with the business. Currently, we are focusing on customer discovery and validation while continuing to develop our prototype. We will present at the final pitch day of InventOR on June 26th.</p>
 
-here.
+      <h4 class="tools-title">Tools & Skills</h4>
+      <ul class="tools-list">
+        <li>Market Research</li>
+        <li>Customer Discovery</li>
+        <li>Product Development</li>
+        <li>Leadership</li>
+      </ul>
 
-Tools & Skills
+      <img src="images/IMG_0765.jpeg" alt="Insertact Project">
+      <img src="images/IMG_0766.jpeg" alt="Insertact Project">
+      <img src="images/IMG_0777.png" alt="Insertact Project">
+    </div>
+  </div>
 
-Market Research
-Customer Discovery
-Product Development
-Leadership
+  <div class="project-card">
+    <h3>John S. Rogers Science Program</h3>
+    <p>A mathematics research project on the Moran model.</p>
 
+    <button class="learn-more-btn">Learn More</button>
 
+    <div class="extra-info">
+      <p>During the summer of 2025, I worked as a research assistant under Professor Yung-Pin Chen on a mathematics research project focused on the Moran model and stochastic systems.</p>
 
+      <ul>
+        <li>Modeled stochastic systems using R and Python to simulate risk dynamics and time-space convergence in uncertain environments.</li>
+        <li>Analyzed Markov chains and applied probability theory to study long-term behavior, fixation probabilities, and absorbing states in population-based models.</li>
+        <li>Presented research findings at a campus-wide lunch talk, communicating technical concepts and results to students and faculty across disciplines.</li>
+      </ul>
 
+      <h4 class="tools-title">Tools & Skills</h4>
+      <ul class="tools-list">
+        <li>Python</li>
+        <li>R</li>
+      </ul>
 
-</div> </div>
-<p> A mathematics research project on the Moran model </p>
+      <img src="images/IMG_0768.JPG" alt="Math Research">
+      <img src="images/IMG_8937.jpg" alt="Math Research">
+      <img src="images/IMG_8941.JPG" alt="Math Research">
+    </div>
+  </div>
 
-<button class="learn-more-btn">
-    Learn More
-</button>
+  <div class="project-card">
+    <h3>Homeowner Insurance Case Competition</h3>
+    <p>A case competition hosted as part of the CAS Central Summer Program.</p>
 
-<div class="extra-info">
+    <button class="learn-more-btn">Learn More</button>
 
-   <p>
-During the summer of 2025, I worked as a research assistant under Professor Yung-Pin Chen on a mathematics research project focused on the Moran model and stochastic systems.
-<li>Analyzed Markov chains and applied probability theory to study long-term behavior, fixation probabilities, and absorbing states in population-based models.</li>
+    <div class="extra-info">
+      <p>During the summer of 2025, I was accepted into the CAS Center Summer Program. Over eight weeks, we worked on a case competition focused on homeowner insurance. I served as the team lead for a cohort of eight participants. We analyzed two years of insured property data across multiple perils and discount types using Excel to identify risk patterns and develop recommendations.</p>
 
-<li>Presented research findings at a campus-wide lunch talk, communicating technical concepts and results to students and faculty across disciplines.</li>
-     <img src="images/IMG_0768.JPG" alt="Math Research">
-    <img src="images/IMG_8937.jpg" alt="Math Research">
-    <img src="images/IMG_8941.JPG" alt="Math Research">
-<div class="project-card">
-<p> A case competition hosted as part of the CAS Central Summer Program </p>
-
-<button class="learn-more-btn">
-    Learn More
-</button>
-
-<div class="extra-info">
-
-   <p>
-During the summer of 2025, I was accepted into the CAS Center Summer Program. Over the course of eight weeks, we worked on a case competition focused on homeowner insurance.
-I served as the team lead for a cohort of eight participants. We analyzed two years of insured property data across multiple perils and discount types, using Excel to identify
-risk patterns and develop recommendations. I also applied concepts from underwriting, pricing, and reserving that I learned throughout the program to the case competition.
-
-    <ul class="tools-list">
+      <h4 class="tools-title">Tools & Skills</h4>
+      <ul class="tools-list">
         <li>Excel</li>
         <li>Data Analysis</li>
         <li>Data Visualization</li>
-        <li>Leadership</li> </ul>
-    <img src="images/IMG_9029.jpg" alt="Homeowner Case">
-    
-<div class="project-card">
-<p> A case competition hosted as part of the CAS Student Central Annual Meeting </p>
+        <li>Leadership</li>
+      </ul>
 
-<button class="learn-more-btn">
-    Learn More
-</button>
+      <img src="images/IMG_9029.jpg" alt="Homeowner Case">
+    </div>
+  </div>
 
-<div class="extra-info">
+  <div class="project-card">
+    <h3>Reinsurance Case Competition</h3>
+    <p>A case competition hosted as part of the CAS Student Central Annual Meeting.</p>
 
-   <p>
-       I led a team of four participants in this case competition. My teammates came from UT Austin, UT Dallas, and TCU. 
-       In the case study, we acted as a reinsurance company tasked with proposing a quota share treaty for a client insurance company focused on catastrophic risk.
-       Our goal was to provide recommendations to help manage underwriting volatility, maintain profitability, and preserve strong financial ratings. 
-       We primarily used Excel to analyze the company’s overall profile, business characteristics, and strategic goals. 
-       We also analyzed claims data related to catastrophic and non-catastrophic events to evaluate risk exposure and support our recommendations.</p>
+    <button class="learn-more-btn">Learn More</button>
 
-     <h4 class="tools-title">Tools & Skills</h4>
+    <div class="extra-info">
+      <p>I led a team of four participants in this case competition. In the case study, we acted as a reinsurance company tasked with proposing a quota share treaty for a client insurance company focused on catastrophic risk. We used Excel to analyze the company’s profile, business characteristics, strategic goals, and claims data.</p>
 
-    <ul class="tools-list">
+      <h4 class="tools-title">Tools & Skills</h4>
+      <ul class="tools-list">
         <li>Excel</li>
         <li>Data Analysis</li>
         <li>Data Visualization</li>
-        <li>Leadership</li> </ul>
-    
-    <img src="images/IMG_1034.JPG" alt="Reinsurance Case">
-    
+        <li>Leadership</li>
+      </ul>
 
+      <img src="images/IMG_1034.JPG" alt="Reinsurance Case">
+    </div>
+  </div>
 
-<form action="/submit-form" method ="POST">
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <a href="https://www.linkedin.com/in/thoannguyen495/" target="_blank" class="linkedin-icon">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <form action="/submit-form" method="POST">
     <label>Name</label>
-    <input type="text" name ="name">
+    <input type="text" name="name">
 
     <label>Email</label>
-    <input type="email" name= "email">
+    <input type="email" name="email">
 
     <label>Message</label>
-    <textarea name ="message"></textarea>
+    <textarea name="message"></textarea>
 
     <button type="submit">Send</button>
-</form>
+  </form>
+</section>
 
+<footer>
+  <p>© 2026 Thoan Nguyen. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
